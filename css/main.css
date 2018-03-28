@@ -26,6 +26,7 @@ h1 {
     font-weight: 100;
     text-transform: uppercase;
     margin: 0;
+    color: rgba(0, 255, 255, 0.3);
 }
 h3 {
     font-size: 2.4em;
@@ -41,7 +42,8 @@ a {
     color: #fff;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: rgba(0, 255, 255, 0.3);
 }
 p#pleft {
     max-width:20em;
