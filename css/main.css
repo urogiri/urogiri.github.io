@@ -15,8 +15,8 @@ h1 {
   margin-top: 0;
 }
 
-a:visited {
-	color: blue; 
+a:link, a:visited {
+	color: #8dffcd; 
 }
 
 /* Stroke CSS */
