@@ -1,62 +1,9 @@
-body {
-  margin: 0;
-  padding: 64px;
-  font-family: "Roboto", sans-serif;
-  background-color: #ff8b8b;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-	grid-gap: 24px;
-}
-h1 {
-  letter-spacing: 12px;
-  font-size: 120px;
-  margin-top: 0;
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic);
+* {margin:0;padding:0;}
+body {background-image:linear-gradient(0deg, #8c76ed, #fca4c5);font-family:Roboto,sans-serif;overflow:hidden;}
+canvas {width:100%;height:100%}
+h1 {font-size:3vw;font-weight:100;color:#fff;position:absolute;top:40%;left:40%;}
 
-a:link, a:visited {
-	color: blue; 
+a {
+	color: #0000ff; 
 }
-
-/* Stroke CSS */
-.t-stroke {
-  color: transparent;
-  -moz-text-stroke-width: 3px;
-  -webkit-text-stroke-width: 3px;
-  -moz-text-stroke-color: #212121;
-  -webkit-text-stroke-color: #212121;
-}
-.t-shadow {
-  text-shadow: 7px 7px #8dffcd;
-}
-
-/* Shadow Stroke CSS */
-.t-stroke--shadow {
-  color: #ff8b8b;
-  text-shadow: -3px 3px #212121, -3px -3px #212121, 3px -3px #212121,
-    3px 3px #212121, 6px 6px #8dffcd;
-}
-
-.t-shadow--halftone {
-  position: relative;
-}
-.t-shadow--halftone::after {
-  content: "HELLO";
-  font-size: 120px;
-  letter-spacing: 12px;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQYV2NUVFT8f//+fUYGBgYGMAEDcA5IBQCKJQVmn76DhAAAAABJRU5ErkJggg==)
-    repeat;
-  background-size: 5x;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -moz-text-stroke-width: 0;
-  -webkit-text-stroke-width: 0;
-  position: absolute;
-  left: 6px;
-  top: 6px;
-  z-index: -1;
-}
-
