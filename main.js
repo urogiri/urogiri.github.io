@@ -1,3 +1,5 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js"</script>
+
 function init() {
 	
 	// heeere we go !
