@@ -1,4 +1,5 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js"</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</script>
+<script src="https://cdn.rawgit.com/michalsnik/aos/1.0.1/dist/aos.css"</script>
 
 console.clear();
 AOS.init({
