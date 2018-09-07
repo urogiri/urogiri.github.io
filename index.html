@@ -5,4 +5,31 @@
    <link rel="stylesheet" type="text/js" href="/main.js">
 </head>
 
-<h1>hello i'm nicole. a self-taught coder. right now, i'm developing a safety app. you can stalk me on: <a href="https://github.com/urogiri">github</a>, <a href="https://codepen.io/urogiri">codepen</a>, <a href="https://twitter.com/nicoleathy">twitter</a>, or check out my <a href="https://urogiri.github.io/resume.pdf">resume</a>. also, feel free to email me at nicole.anne.teo@gmail.com</h1>
+<div id="ltrademark">
+	<transition name="fade">
+		<section class="loader" v-if="!loaded">
+			<div class="loader-bar"></div>
+			<ltm color="#fff" dimensions="70px"></ltm>
+		</section>
+	</transition>
+	<section class="hero" v-if="loaded">
+		<div class="info-cont">
+			<ltm color="#fff" dimensions="70px"></ltm>
+			<p>Hi, my name is</p>
+			<H1>Nicole Teo.</H1>
+			<p>I'm a self-taught coder<a href="#0" @click.stop="fpModalToggle" title="Wth is a full-process designer?!">*</a> specializing in Web &amp; Mobile development<br/><br/>
+				You can stalk me on: <a href="https://github.com/urogiri">github</a>, <a href="https://codepen.io/urogiri">codepen</a>, <a href="https://twitter.com/nicoleathy">twitter</a>, or check out my <a href="https://urogiri.github.io/resume.pdf">resume</a>. Also, feel free to email me at nicole.anne.teo@gmail.com</p>
+		</div>
+	</section>
+	<section class="work" v-if="loaded">
+		<div class="work-cont">
+			
+		</div>
+	</section>
+	<section class="footer">
+		<p>2018 &copy; copyright Nicole Teo.</p>
+	</section>
+	<transition name="fade">
+		<modal v-if="fpModalOpen" title="What is a Full-Process Designer?" :close="fpModalToggle" :content="fpContent" :mobile="isMobile"></modal>
+	</transition>
+</div>
