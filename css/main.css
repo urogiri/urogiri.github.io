@@ -1,120 +1,172 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
-
-*, *::before, ::after{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body{
-  font-size: 1em;
-  font-family: Roboto,Inconsolata, helvetica;
-  font-style: italic;
-}
-
-.section--container{
-/*   border: 3px solid black; */
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container{
-/*   border: 2px solid black;  */
-  margin: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 150px 150px;
-  grid-gap: 10px;
-}
-
-.main-title{
-  justify-content: center;
-  align-items: center;
-  grid-column: 1 / 3;
-  background: white; 
-  transform-style: preserve-3d;
-  border: 5px solid black;
-  transition: 
-    box-shadow ease-in-out .2s,
-    background ease-in-out .2s;
-}
-
-.main-title:hover{
-  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
-  background: #7cffcb;
-}
-
-.title{
-  display: flex;
-  font-size: 5rem;
-  padding: 15px;
+body {
+  color: white;
+  background-color: black;
+  font-family: "Press Start 2P", monospace;
+  font-size: 1rem;
+  text-align: center;
   text-transform: uppercase;
-  color: black;
-  letter-spacing: 2px;
-  transition: 
-    transform ease-in-out .2s,
-    text-shadow ease-in-out .2s;
+  margin: 0;
 }
 
-.title:hover {
-  text-shadow: 3px 3px 1px #fff;
-  transform: translateZ(20px); 
-}
-
-.box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid black;
-  background: white;
-  transform-style: preserve-3d;
-  transition: 
-    background ease-in-out .2s,
-    box-shadow ease-in-out .2s;
-}
-
-.box a:link, .box a:visited {
-  color: black;
-}
-
-.box:hover{
-  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.70);
-  background: #7cffcb;
-  text-shadow: 3px 3px 1px #fff;
-}
-
-.box .icon {
-  transform: translateZ(30px);
-}
-
-.box-1{
-  grid-column: 1 / 2;
-  grid-row: 2;
-}
-
-.box-2{
-  grid-column: 2 / 3;
-  grid-row: 2;
-}
-
-.box-3{
-  grid-column: 1 / 2;
-  grid-row: 3;
-}
-
-.box-4{
-  grid-column: 2 / 3;
-  grid-row: 3;
+body:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-image: url(https://linxea.github.io/line.svg);
+  opacity: 0.2;
+  z-index: 100;
+  content: "";
+  pointer-events: none;
 }
 
 a {
-  color: black; 
+  text-decoration: none;
+  color: inherit;
 }
 
-a:link {
-    text-decoration: none;
+h1 {
+  margin: 0;
+}
+
+.splash-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  margin: auto;
+  font-family: "Permanent Marker", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40vh;
+  font-size: 2rem;
+  line-height: 0.75;
+  word-break: break-word;
+  max-width: 500px;
+}
+
+.title h1 {
+  background: -webkit-linear-gradient(rgb(255, 18, 18) 30%, rgb(255, 215, 38));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-top {
+  transform: skew(-10deg) rotate(-10deg) translateX(-2rem);
+}
+
+.title-bottom {
+  transform: skew(-10deg) rotate(-10deg) translateX(1rem);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  margin: auto;
+}
+
+.buttons a {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+}
+
+.credit {
+  margin-top: 10px;
+  pointer-events: none;
+}
+
+.grey-with-red {
+  color: rgb(192, 192, 192);
+  text-shadow: 2px 2px 0 rgb(192, 11, 11);
+}
+
+.purple-with-blue {
+  color: rgb(147, 154, 255);
+  text-shadow: 2px 2px 0 rgb(47, 61, 255);
+}
+
+.yellow-with-darkyellow {
+  color: rgb(226, 179, 24);
+  text-shadow: 0 2px 0 rgb(107, 77, 11), 2px 0 0 rgb(151, 109, 19),
+    2px 2px 0 rgb(151, 109, 19);
+}
+
+.yellow {
+  color: rgb(226, 179, 24);
+}
+
+.big {
+  font-size: 6rem;
+}
+
+@media (min-width: 400px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .big {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .big {
+    font-size: 9rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    height: 50vh;
+  }
+
+  .buttons {
+    height: 40vh;
+  }
+
+  .title-top {
+    transform: skew(-10deg) rotate(-10deg) translateX(-2rem);
+  }
+
+  .title-bottom {
+    transform: skew(-10deg) rotate(-10deg) translateX(3rem);
+  }
+}
+
+@media (min-width: 800px) {
+  .credit {
+    position: absolute;
+    right: 50px;
+    margin-top: 0;
+  }
+}
+
+.load {
+  animation: load 800ms 500ms backwards;
+}
+
+@keyframes load {
+  0% {
+    filter: blur(2px) hue-rotate(-150deg);
+  }
+}
+
+::selection {
+  background: #b4fdff;
+}
+
+::-moz-selection {
+  background: #b4fdff;
 }
